@@ -1,0 +1,31 @@
+.order-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 10px rgba(233, 30, 99, 0.08);
+}
+
+.order-card h4 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.order-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.order-card small {
+  color: #888;
+}
+
+.status-form select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+}

@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: white; /* Pastikan latar belakang solid */
+    transition: background-color 0.4s ease; /* Haluskan perubahan background saat sticky */
+}
+
+/* Header saat sticky */
+header.sticky {
+    background-color: white; /* Pastikan header tetap dengan latar belakang solid */
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); /* Tambahkan bayangan untuk efek sticky */
+    padding: 20px 10%; /* Jika padding perlu diubah, sesuaikan */
+}
+
+/* Responsif: Header tetap dengan background solid */
+@media(max-width: 890px) {
+    header {
+        padding: 20px 3%;
+    }
+}
+
+.logo img{
+    max-width: 120px;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: pink;
+}
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative; /* TAMBAHKAN ini untuk posisi badge */
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: pink;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover{
+    transform: scale(1.1);
+    color: black;
+}
+#menu-icon{
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+section{
+    padding: 5% 10%;
+}
+.main-home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/banner.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.main-text h5{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}   
+.main-text h1{
+    color: black;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+.main-text p{
+    color: rgb(168, 105, 105);
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.main-btn{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid black;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+.main-btn:hover{
+    background-color: black;
+    color: white;
+}
+.main-btn i{
+    vertical-align: middle;
+}
+.down-arrow{
+    position: absolute;
+    top: 85%;
+    right: 11%;
+}
+.down i{
+    font-size: 30px;
+    color: #2c2c2c;
+    border: 2px solid #2c2c2c;
+    border-radius: 50px;
+    padding: 12px 12px;
+}
+.down i:hover{
+    background-color: #2c2c2c;
+    color: white;
+    transition: all .42s ease;
+}
+header.sticky{
+    background: white;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+/* trending section css */
+.center-text h2{
+    color: black;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.center-text span{
+    color: pink;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img{
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: green;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon:hover{
+    color: red;
+}
+.ratting i{
+    color: #ff8c00;
+    font-size: 18px;
+}
+.price h4{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p{
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* contact section */
+.contact{
+    background-color: white;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+}
+.first-info img{
+    width: 140px;
+    height: auto;
+}
+.contact-info h4{
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p{
+    color: grey;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info p:hover{
+    color: pink;
+}
+.social-icon i{
+    color: grey;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+.social-icon i:hover{
+    transform: scale(1.3);
+}
+.end-text{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.end-text p{
+    color: black;
+    text-transform: capitalize;
+}
+
+/* responsive css */
+@media(max-width:890px){
+    header{
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+@media(max-width:630px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size: 18px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+@media(max-width:750px){
+    .navmenu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 120px 30px;
+      transition: left 0.4s ease;
+      z-index: 999;
+    }
+  
+    .navmenu.open {
+      left: 0;
+    }
+  
+    .navmenu a {
+      display: block;
+      margin: 18px 0;
+    }
+  }
+  
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: pink;
+    color: white;
+  }
+  
+  .dropdown-content.show {
+    display: block;
+  }
+  
+  .search-box {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 90px; /* geser ke kiri dari ikon search */
+    background: white;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .search-box input {
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .search-box button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+  }  
+  
+  /* Pastikan produk dan container produk memiliki latar belakang solid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+    background-color: white; /* Latar belakang solid */
+}
+
+.row {
+    position: relative;
+    transition: all .40s;
+    background-color: white; /* Latar belakang produk tetap putih */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk memperjelas elemen */
+    border-radius: 10px; /* Sudut lebih lembut */
+    overflow: hidden; /* Menghindari gambar keluar dari elemen */
+    z-index: 1; /* Pastikan elemen produk tetap terletak di atas elemen lain */
+}
+
+/* Pastikan gambar tidak mengalami masalah transparansi */
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    border-radius: 10px;
+    object-fit: cover; /* Pastikan gambar tetap pas dengan ukuran elemen */
+}
+
+/* Menghindari transparansi pada teks dan elemen lainnya */
+.product-text h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: green;
+    padding: 3px 10px;
+    border-radius: 2px;
+    z-index: 2; /* Pastikan teks tidak tertutup */
+}
+
+/* Ikon hati dan rating tetap jelas */
+.heart-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: #2c2c2c;
+    z-index: 2; /* Pastikan ikon tidak tertutup */
+}
+
+.heart-icon:hover {
+    color: red;
+}
+
+.ratting i {
+    color: #ff8c00;
+    font-size: 18px;
+}
+
+.price h4 {
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.price p {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navmenu .custom-btn {
+  background-color: #ff4d6d;
+  padding: 6px 14px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+.navmenu .custom-btn:hover {
+  background-color: #e60039;
+}
+
+.custom-btn {
+  background-color: #ff4d6d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.custom-btn:hover {
+  background-color: #e60039;
+}
+
+

@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #fff0f5;
+    color: #333;
+  }
+  
+  .top-header {
+    width: 100%;
+    background-color: #ff69b4;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    margin-top: 100px;
+    padding: 0 40px 40px;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #ffc0cb;
+    width: 260px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+  }
+  
+  .profile-pic {
+    text-align: center;
+  }
+  
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .profile-pic h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .balance {
+    background-color: #ffe4e1;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  .sidebar-links a {
+    display: block;
+    margin: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sidebar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .content {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .profile-section {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .avatar-box {
+    text-align: center;
+    flex: 0 0 160px;
+  }
+  
+  .avatar-box img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .btn-pink {
+    margin-top: 15px;
+    background-color: #ff69b4;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-outline {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: 2px solid #ff69b4;
+    background-color: transparent;
+    color: #ff69b4;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .bio-box {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .bio-box h2 {
+    margin: 15px 0 8px;
+    color: #ff1493;
+  }
+  
+  .bio-box a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .bio-box a:hover {
+    text-decoration: underline;
+  }
+  
+  .verified {
+    background-color: #d1f7d6;
+    color: #228b22;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    display: none;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-box {
+    background: #fff0f5;
+    padding: 25px 30px;
+    border-radius: 18px;
+    width: 420px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.25);
+    border: 2px solid #ffb6c1;
+  }
+  
+  .popup-box h2 {
+    margin-bottom: 10px;
+    color: #ff1493;
+    font-size: 20px;
+  }
+  
+  .popup-box p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  .popup-box label {
+    font-weight: bold;
+    color: #ff69b4;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .popup-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 6px;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  .popup-box input:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px #ff69b4;
+  }
+  
+  .popup-box small {
+    font-size: 12px;
+    color: #888;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .save-btn {
+    width: 100%;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .save-btn:hover {
+    background-color: #ff1493;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff69b4;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .date-select-group {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  
+  .date-select-group select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    background-color: #fff;
+    flex: 1;
+    appearance: none;
+  }
+  
+  .gender-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  
+  .gender-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .gender-option input[type="radio"] {
+    display: none;
+  }
+  
+  .gender-option .icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  .gender-option img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gender-option input[type="radio"]:checked + .icon {
+    border-color: #00b300;
+    background-color: #eaffea;
+  }
+  
+  .gender-option span {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .avatar-box {
+      margin-bottom: 20px;
+    }
+  
+    .bio-box {
+      text-align: left;
+    }
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  

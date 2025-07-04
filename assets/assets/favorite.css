@@ -1,0 +1,163 @@
+/* FAVORITE PAGE STYLING */
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container-favorite {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.favorite-title {
+  font-size: 2em;
+  font-weight: 600;
+  color: #e91e63;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.favorite-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.favorite-card {
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.favorite-card .price {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+.favorite-card .product-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.remove-favorite {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 6px 12px;
+  background: #ffdde4;
+  color: #e91e63;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-favorite:hover {
+  background: #ffc1d2;
+}
+
+/* Tambahkan di style.css atau dalam <style> */
+.favorite-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 20px; /* Tambahkan padding atas 100px */
+}
+
+.favorite-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #e91e63;
+  margin-bottom: 40px;
+}
+
+.favorite-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 6px;
+  background-color: #fafafa;
+}
+
+
+.product h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.product p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.remove-favorite-btn {
+  background-color: #ffe0e9;
+  color: #e91e63;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-favorite-btn:hover {
+  background-color: #ffc9d6;
+}
+
+

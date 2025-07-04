@@ -1,0 +1,110 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f5;
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+}
+
+.checkout-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 192, 203, 0.3);
+}
+
+h2, h3 {
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.checkout-summary {
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff8fa;
+  margin-bottom: 30px;
+}
+
+.checkout-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkout-summary th,
+.checkout-summary td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px dashed #ffb6c1;
+  font-size: 14px;
+}
+
+.checkout-summary th {
+  background-color: #ffe4ec;
+  color: #d81b60;
+}
+
+.checkout-form {
+  background: #fff8fb;
+  border: 2px dashed #ffc1e3;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: #e91e63;
+  outline: none;
+  box-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+}
+
+.checkout-form button {
+  background: linear-gradient(to right, #ff6ec4, #fcb0b3);
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.checkout-form button:hover {
+  background: linear-gradient(to right, #f06292, #ff8fab);
+}
+
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .checkout-summary th, .checkout-summary td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .checkout-form input,
+  .checkout-form textarea {
+    font-size: 13px;
+  }
+}

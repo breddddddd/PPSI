@@ -1,0 +1,237 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  .container-section {
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+  }
+  
+  .container {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+  }
+  
+  .image-section {
+    flex: 1;
+  }
+  
+  .image-section img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .details {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px; /* Tambahan */
+}
+  
+  .details h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .rating {
+    font-size: 14px;
+    color: pink;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 26px;
+    font-weight: bold;
+    color: pink;
+    margin-bottom: 15px;
+  }
+  
+  .details p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 16px;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  
+  .color-box {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .button {
+    margin-top: 20px;
+    background-color: pink;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: fit-content;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: pink;
+  }
+
+  .quantity-section {
+    margin-top: 20px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .qty-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #quantity {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    height: 30px;
+    margin: 0 5px;
+  }
+  
+  .button.outline {
+    background-color: #fff;
+    color: pink;
+    border: 1px solid pink;
+  }
+  .button.outline:hover {
+    background-color: #ffeae5;
+  }
+
+  .custom-alert {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 192, 203, 0.2); /* pink transparan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .custom-alert.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .alert-box {
+    background: #ffe6ec; /* soft pink */
+    padding: 30px 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(255, 105, 135, 0.2);
+    max-width: 320px;
+    width: 100%;
+    animation: popupFade 0.3s ease;
+    border: 2px solid #ffb6c1;
+  }
+  
+  .alert-box h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #d6336c; /* pink tua */
+    font-weight: 600;
+  }
+  
+  .alert-box p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #a44f68;
+  }
+  
+  .close-btn {
+    padding: 10px 24px;
+    background-color: #ff7aa2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(255, 105, 135, 0.2);
+    transition: background-color 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #ff5c89;
+  }
+  
+  @keyframes popupFade {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .heart-icon.active i {
+  color: red;
+  }
+
+  .variant-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.variant-name {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #333;
+  max-width: 80px;
+  word-wrap: break-word;
+}
+
+  
